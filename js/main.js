@@ -32,6 +32,9 @@ function displayTime() {
   let today = new Date();
   let hour = today.getHours();
   let minute = today.getMinutes();
+  if(minute < 10) {
+    minute = "0" + minute;
+  }
   time.innerText = hour + ":" + minute;
   if (hour >= 5 && hour < 12) {
     greeting.innerText = "GOOD MORNING, IT'S CURRENTLY";
